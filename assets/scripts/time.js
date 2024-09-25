@@ -1,5 +1,6 @@
 function showTime() {
-	document.getElementById('currentTime').innerHTML = new Date().toUTCString();
+	const now = new Date();
+	document.getElementById('currentTime').innerHTML = now.toLocaleString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
 }
 
 showTime();
